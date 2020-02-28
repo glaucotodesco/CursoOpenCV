@@ -9,7 +9,7 @@ b,g,r = cv2.split(imgRGB)
 #get blue component
 b2 = imgRGB[:,:,0]
 
-#set 0 to green compoment 
+#set 0 to red compoment 
 copy[:,:,2]=0;
 
 cv2.imshow('Blue'       ,b)

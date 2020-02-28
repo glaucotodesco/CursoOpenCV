@@ -1,6 +1,6 @@
 import cv2
 
-imgRGB  = cv2.imread('../data/lena.jpg')
+imgRGB  = cv2.imread('data/lena.jpg')
 
 #get red value of pixel at 100x100 
 red = imgRGB.item(100,100,2);
