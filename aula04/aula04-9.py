@@ -5,13 +5,17 @@ from matplotlib import pyplot as plt
 
 img1  = cv2.imread('data/lena.jpg')
 
-BLUE = [255,0,0]
+RED = [255,0,0]
 
 replicate = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REPLICATE)
 reflect = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REFLECT)
 reflect101 = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REFLECT_101)
 wrap = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_WRAP)
-constant= cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_CONSTANT,value=BLUE)
+constant= cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_CONSTANT,value=RED)
+
+# plt.subplot(2,3, X )
+# Cria um plot de tamanho 2 x 3 (6 Posicoes).
+# X e a posicao ocupada (valores de 1 a 6)
 
 plt.subplot(2,3,1),plt.imshow(img1,'gray'),plt.title('ORIGINAL')
 plt.subplot(2,3,2),plt.imshow(replicate,'gray'),plt.title('REPLICATE')
