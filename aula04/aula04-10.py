@@ -1,16 +1,16 @@
 import cv2
 
-imgRGB  = cv2.imread('data/lena.jpg')
+imgBGR  = cv2.imread('data/lena.jpg')
 
-copy = imgRGB.copy()
-ref  = imgRGB
-roi  = imgRGB[200:400, 200:400]
+copy = imgBGR.copy()
+ref  = imgBGR
+roi  = imgBGR[200:400, 200:400]
 
 
-imgRGB[0:200, 0:200] = 0
+imgBGR[0:200, 0:200] = 0
 roi[:,:] = 255
 
-cv2.imshow('imgRGB'       ,imgRGB)
+cv2.imshow('imgBGR'       ,imgBGR)
 cv2.imshow('Copy'         ,copy)
 cv2.imshow('Ref'          ,ref)
 

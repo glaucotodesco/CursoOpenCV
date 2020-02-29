@@ -1,19 +1,19 @@
 import cv2
 
-imgRGB  = cv2.imread('data/lena.jpg')
+imgBGR  = cv2.imread('data/lena.jpg')
 
 #cria um ROI - Region of Interest
-roi = imgRGB[200:400, 200:400]
+roi = imgBGR[200:400, 200:400]
 
-final = imgRGB.copy()
+final = imgBGR.copy()
 final[0:200, 0:200] = roi
 
 
-final[imgRGB.shape[0]-200:imgRGB.shape[0], 
-      imgRGB.shape[1]-200:imgRGB.shape[1]] = roi 
+final[imgBGR.shape[0]-200:imgBGR.shape[0], 
+      imgBGR.shape[1]-200:imgBGR.shape[1]] = roi 
 
 
-cv2.imshow('RGB image',imgRGB)
+cv2.imshow('BGR image',imgBGR)
 cv2.imshow('ROI  mage',roi)
 cv2.imshow('Final  mage',final)
 

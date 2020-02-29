@@ -1,13 +1,13 @@
 import cv2
 
-imgRGB  = cv2.imread('data/lena.jpg')
-copy = imgRGB.copy()
+imgBGR  = cv2.imread('data/lena.jpg')
+copy = imgBGR.copy()
 
 #get b-g-r components
-b,g,r = cv2.split(imgRGB)
+b,g,r = cv2.split(imgBGR)
 
 #get blue component
-b2 = imgRGB[:,:,0]
+b2 = imgBGR[:,:,0]
 
 #set 0 to red compoment 
 copy[:,:,2]=0;
